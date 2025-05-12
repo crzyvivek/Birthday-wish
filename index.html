@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Vivek</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .cake {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      background: #ff6f61;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+      animation: bounce 1s ease infinite alternate;
+    }
+
+    .cake::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 30px;
+      width: 140px;
+      height: 40px;
+      background: #ff9966;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .name {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .candles {
+      position: absolute;
+      top: -60px;
+      left: 65px;
+      display: flex;
+      gap: 5px;
+    }
+
+    .candle {
+      width: 20px;
+      height: 40px;
+      background: #fff;
+      border-radius: 5px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .flame {
+      width: 6px;
+      height: 10px;
+      background: yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: -12px;
+      animation: flicker 0.3s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; transform: scaleY(1); }
+      100% { opacity: 0.6; transform: scaleY(1.2); }
+    }
+
+    @keyframes bounce {
+      to { transform: translateY(-5px); }
+    }
+
+    .shayari {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 18px;
+      max-width: 400px;
+      animation: fadeIn 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0.3; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cake">
+    <div class="candles">
+      <div class="candle"><div class="flame"></div>2</div>
+      <div class="candle"><div class="flame"></div>4</div>
+    </div>
+    <div class="name">🎂 Vivek 🎂</div>
+  </div>
+
+  <div class="shayari">
+    Tere is khaas din pe dua hai hamari,<br/>
+    Khushiyo se bhari rahe zindagi tumhari 🎉
+  </div>
+
+</body>
+</html>
